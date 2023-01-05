@@ -1,0 +1,170 @@
+git config --global user.name "nagarajansreekantan"
+git config --global user.email "nagarajan@megacctechnology.in"
+
+1)  Create Repository in Github
+
+git init
+
+--> .git folder will create
+
+cd .git
+
+inside .git files and folders will create ==> HEAD  config  description  hooks/  info/  objects/  refs/
+
+
+2)  Managing Changes
+
+Pull the files from central repository to local git
+----------------------------------------------------
+
+git remote add origin1 "https://github.com/Megactechnology/naga.git"
+
+git pull origin1 main
+
+==>  create and edit some files and pull the files from central repository
+==>  while pulling to git it comes in compresed formate but in work space it will be in uncompressed formate.
+
+git pull origin1 main
+Verify files has been pulled
+
+commit changes in local repository
+----------------------------------
+
+==>  create files in local repository
+
+git status
+git add file2.txt
+git status
+git commit -m "adding first commit in local repo"
+git status
+
+==>  create and modify  multiplie files for commit
+git status
+git add -A
+git status
+git commit -a -m "adding files"
+git status
+
+==>  create file
+git status
+git add -A
+git commit -a
+==> add message in vi editor and save like :wq
+git status
+
+3) Parallel Development --> Branching
+
+Branches are pointer to specific commit
+Branches are 2 types
+  Local branches
+  Remote tracking branches
+
+Create Local Branch
+===================
+
+git branch firstbranch
+ls
+git checkout firstbranch
+ls
+create file branch1.txt in local
+
+git add branch1.txt
+git commit -m "branch file"
+ls
+
+git checkout main
+ls
+
+4)  Merging
+
+It is way to combine the work of different branches together
+Allows to branch off, develop a new feature and combine it back in
+
+git checkout main
+ls
+git merge firstbranch
+
+git checkout master
+ls
+git merger firstbranch
+ 
+
+git checkout firstbranch
+modifify file in firstbranch
+
+git commit -a "file Mondified"
+
+cat branch1.txt
+git checkout main
+cat branch1.txt
+git merge firstbranch
+
+Parallel Development  ==> Rebasing
+
+This is also a way of combining the work between different branches
+It can be used to make a llinear sequence of commits;
+It is used to get much cleaner project history
+
+git checkout firstbranch
+create some files
+
+git status
+git add -A
+git commit -a -m "added files for rebaseing"
+ls
+get checkout master
+ls
+git checkout firstbranch
+ls
+git rebase master
+ls
+git checkout master
+ls
+git rebase firstbranch
+ls
+
+
+
+Pushing files to github repository
+==================================
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git log
+
+
+
+
+
+
+
+
+
+
+
+git remote add origin "https://github.com/Megactechnology/git-github.git"
+
+git pull origin main
